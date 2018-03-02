@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SAKURA-AGAR</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loginkit.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--<link rel="stylesheet" href="agarplus_v2.css">-->
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <title></title>
+   <!-- <script type="text/javascript" src="facebookapi.js"></script>-->
+  
+</head>
+</head>
+
+<body>
+
+    <div id="overlays">
+        <div id="helloContainer" data-logged-in="0" data-has-account-data="0" data-party-state="0" data-results-state="0" data-gamemode="" style="transform: translate(-50%, -50%) scale(0.685195908125844)">
+        <div id="menu-panel" class="navigation">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a id="tab_home" href="#home" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true" >
+                            Home 
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a id="tab_settings" href="#settings" aria-controls="settings" role="tab" data-toggle="tab" >
+                            Settings
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a id="tab_theme" href="#theming" aria-controls="theming" role="tab" data-toggle="tab">
+                            Theming
+                        </a>
+                    </li>
+                   
+                    <li role="presentation">
+                        <a id="tab_extended" href="#status" aria-controls="status" role="tab" data-toggle="tab">
+                            Profile
+                        </a>
+                    </li>
+                    
+                    <li role="presentation">
+                        <a id="tab_hotkeys" href="#hotkeys" aria-controls="hotkeys" data-toggle="modal" data-target="#hotkeys_setting" >
+                            Hotkeys
+                        </a>
+                    </li>
+                    <li role="presentation" >
+                        <a id="tab_Extra" href="#Extra" aria-controls="Extra" role="tab" data-toggle="tab"  >
+                            Ranking
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="side-container left-side">
+                <div id="menu-panel" class="agario-panel agario-side-panel agarioProfilePanel level" style="display: block !important ">
+                
+                    <div id="profile-main" style="/*margin-right: 140px;*/">
+                      
+                        <input type="text" class="partyToken form-control" placeholder="コード">
+                        
+                        
+                        <button onclick="SettingsTextJP(); return false" class="buttonclass1 btn btn-success jumpbtn">日本語化</button>
+                        <button onclick="SettingsTextEN(); return false" class="buttonclass1 btn btn-success jumpbtn">English</button>
+                       <hr>
+                       
+                         <button type="button" onclick="document.location = 'https://www.agar-skin.com/'; return false" class="buttonclass btn btn-success jumpbtn">Agar-skin.com</button><br>
+                         <button type="button" onclick="document.location = 'http://sakuramoti.webcrow.jp/sh/'; return false" class="buttonclass btn btn-success jumpbtn">Old SAKURA-Agar</button><br>
+                       
+                       
+                        <!--<button onclick="login(); return false" class="buttonclass1 btn btn-success jumpbtn">Login</button>-->
+                      <!-- <button onclick="resetlogin(); return false" class="buttonclass1 btn btn-success jumpbtn">Logout</button>-->
+                      <!-- <button onclick="XPBoost(); return false" class="buttonclass1 btn btn-success jumpbtn">XP Boost</button>-->
+                     <!--   <div class="AddXP">Add 0 XP</div>-->
+                    
+
+                       
+                       <!--<button onclick="Boodtr(); return false" class="buttonclass1 btn btn-success jumpbtn">random</button>-->
+
+                       
+                            
+                        
+                        <!--<button onclick="PrivateServer(); return false" class="buttonclass1 btn btn-success jumpbtn">PrivateServer Jump</button><br>-->
+                        
+                      
+                       <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                        </fb:login-button>-->
+                    </div>
+                    <!--<button class="btn btn-primary joinParty" onclick="joinParty($(\'.partyToken\').val())">Join</button> 
+				<button class="btn btn-success createParty" style="margin-bottom: 5px" onclick="$(\'#helloContainer\').attr(\'data-party-state\', \'3\');createParty()">Create party token</button>-->
+                </div>
+            </div>
+            <div id="mainPanel" class="agario-panel" style="display: inline-block !important;height: 480px;">
+                <form role="form">
+                    <!--<ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a  href="#home" aria-controls="home" role="tab" data-toggle="tab" id="tab_home">Home</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" id="tab_settings">settings</a></li>
+                        <li role="presentation"><a href="#theming" aria-controls="theming" role="tab" data-toggle="tab" id="tab_theme" id="tab_theme">theme</a></li>
+                        <li role="presentation"><a href="#hotkeys" aria-controls="hotkeys" data-toggle="modal" data-target="#hotkeys_setting" id="tab_hotkeys">key</a></li>
+                        <li role="presentation"><a href="#status" aria-controls="status" role="tab" data-toggle="tab" id="tab_extended">Profile</a></li>
+                    </ul>-->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane in active" id="home">
+                       <!-- <center><p id="pAP">All Player: -- / Player: -- / Spectator: --</p><center>-->
+                         <div id="profile-pic" class="form-group clearfix">
+                            <div class="nav2 arrow-left">
+                            </div>
+                            <div id="preview-img-area"><img id="preview-img"></div>
+                            <div class="nav2 arrow-right">
+                            </div>
+                        </div>
+                            <div id="teamNameContainer" class="input-group">
+                                <input type="text" id="team_name" class="form-control" placeholder="Team" maxlength="10">
+                            </div>
+                            <div id="nickContainer">
+                                <input id="nick" type="text" class="form-control" placeholder="Name" maxlength="15" autofocus="">
+                            </div>
+                            <input type="text" id="skin_url" class="form-control" placeholder="Skin URL">
+                            <div id="locationUnknown"></div>
+                            <button id="play"　type="submit"  onclick="setNick(document.getElementById('nick').value); return false" class="btn btn-play btn-primary btn-needs-server" data-itr="play">Play</button>
+                            <button id="play-guest" type="submit" onclick="setNick(document.getElementById('nick').value); return false" class="btn btn-play-guest btn-success btn-needs-server" data-itr="play_as_guest">Play</button>
+                            <button  onclick="return spectate(),!1" class="btn btn-warning btn-spectate btn-needs-server" data-itr="spectate">Spectate</button>
+
+                           
+                            <center>
+
+                                <!-- admax -->
+                            <!--   <script src="//adm.shinobi.jp/s/f42cdce49cdbfbefc91d4aea1ddccbe7"></script>-->
+                                <!-- admax -->
+                            </center>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings">
+                            <div class="container" style="height: 150px;overflow: auto;width: 350px;">
+                             <div class="showSkinsize"></div>
+                            <div class="Animation"></div>
+                            <div class="zoomSpeed"></div>
+                            <div class="FoodSize"></div>
+                            <div class="CameraDelay"></div>
+                             <div class="showNameMass"></div>
+                             <div class="maxDrawTime"></div>
+                             <div class="NameMassSize"></div>
+                         </div>
+                         <hr>
+                            <div class="container" style="height: 250px;overflow: auto;width: 350px;">
+                                <div class="settingsRow">
+                                    <div class="col-xs-6 firstSettings"></div>
+                                    <div class="col-xs-6 secondSettings"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="theming">
+                            <div class="settingsRow" style="overflow: auto; height: 450px;">
+                                <div class="form-group">
+                                    <label　id="backgroundcolors">BACKGROUND COLOR</label>
+                                    <input type="text" id="backgroundColor" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="bordercolors">BORDER COLOR</label>
+                                    <input type="text" id="borderColor" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="grids">GRID</label>
+                                    <input type="text" id="Grids" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="sectors">SECTOR</label>
+                                    <input type="text" id="Sectors" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="viruss">VIRUS</label>
+                                    <input type="text" id="virus" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="virusstrokes">VIRUS STROKE</label>
+                                    <input type="text" id="virusstroke" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="headercolors">HEADER COLOR</label>
+                                    <input type="text" id="Headercolor" class="minicolors form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label id="minimapguides">MINIMAP GUIDES</label>
+                                    <input type="text" id="MinimapStrokeColor" class="minicolors form-control">
+                                </div>
+                                <div class="form-group" id="pelletColorGroup">
+                                    <label id="pelletcolors">PELLET COLOR</label>
+                                    <input type="text" id="pelletColor" class="minicolors form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="hotkeys">...</div>
+
+                        <div role="tabpanel" class="tab-pane" id="status">
+                        <div class="SRZ-progress-bar clearfix">
+                            <div class="SRZ-exp-bar progress">
+                                <span class="progress-bar-text">0/0 XP</span>
+                                <div class="progress-bar progress-bar-striped" style="width: 5%;    transition: all .9s ease; "></div>
+                            </div>
+                           <div id="lvlText" class="progress-bar-star">0</div>
+                        </div>
+                         <div id="Rank" class="Rankd">Rank --</div>
+                       
+                         <div id="CellsEaten" class="CellsEaten">Total Cells Eaten: --</div>
+                         
+                        <!--<center> <div class="count">100</div></center>-->
+                        <!--<center> <p>10 ~ 19 | StartMass * 1 ~ 1.9</p> </center>
+                        <center> <p>20 ~ 29 | StartMass * 2 ~ 2.9</p> </center>
+                        <center> <p>Max 30 | StartMass * 3　　</p> </center>-->
+                       <!-- <center> <div class="kakuritu">Next --%</div></center>
+                        <center> <div class="atai">--</div></center>
+                        <br>
+                        <button id="Boodtrl" onclick="Boodtr(); getTestXP();setXPLEVEL(); return false" class="buttonclass2 btn btn-success jumpbtn">StartMass Enchant</button>
+                      <button id="Boodtrl" onclick="Boodtr2(); return false" class="buttonclass2 btn btn-success jumpbtn" disabled="">2+Enchant</button>
+                       
+                        
+                        <img class="fb_img" src="http://agar.io/mc//img/profilepic_guest.png">
+                        <div class="profile-name-container">
+                            <div class="SRZ-wallet-container">
+                                <span class="SRZ-wallet-label">0</span>
+                                <img src="https://i.imgur.com/PmBEtCN.png" class="SRZ-wallet-currency">
+                                <div class="SRZ-wallet-plus"><span>+</span></div>
+                            </div>
+                            <div id="GuestName" class="SRZ-profile-name">Guest</div>
+                        </div>
+                        -->
+
+                        <!--<div class="AddXP">0 XP</div>-->
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="Extra">
+
+                        <!--   <div style="text-align: center;font-size: 20px;">Party Ranking</div>
+                            <div style="height:350px; overflow: auto;">
+
+                              <div id="ranking"></div>
+                          </div>
+                          <button id="createbutton" type="button" onclick="CreateAccount()" class="btn-create btn btn-success">Create Accounts</button>
+                         <button type="button" id="Login" onclick="LoginAccount()" style="display: block;" class="btn-Login btn btn-success">Login</button>
+                            <button type="button" id="Logout" onclick="LogoutAccount()" style="display: none;" class="btn-Login btn btn-success">Logout</button>
+                            <button id="Refresh" type="button" onclick="refresh()" class="btn-ref btn btn-success">Refresh</button>
+-->
+                        </div>
+                      
+                       
+                    </div>
+                </form>
+            </div>
+            <div class="side-container">
+                <div id="menu-panel" class="agario-panel agario-side-panel">
+                    <!--<div id="game_info">
+					<p id="ip_info"></p>
+					<p id="player_count"></p>
+					<p id="region_info"></p>
+					<p id="gamemode_info"></p>
+					<p id="lb_info"></p>-->
+                    <!--<button id="btn_copy_gameinfo" class="btn btn-success" type="button">Copy</button></div>-->
+                    <div id="server-box">
+                   
+                        
+                        <li id="game-server" onclick="Main(); return false">
+                            <h4 id="game-server-title">Main</br><span id="Main1"></span><label id="Main">1</label></h4>
+                        </li>
+
+                        <li id="game-server" onclick="Sub(); return false">
+                            <h4 id="game-server-title">Sub(M)</br><span id="Sub1"></span><label id="Sub">1</label></h4>
+                        </li>
+                        <li id="game-server" onclick="MegaSplit(); return false">
+                            <h4 id="game-server-title">Mega Split</br><span id="Megasplit1"></span><label id="MegaSplit">1</label></h4>
+                        </li>
+                        
+                        <li id="game-server" onclick="virusattack(); return false">
+                            <h4 id="game-server-title">Virus Attack</br><span id="Virusattack1"></span><label id="VirusAttack">1</label></h4>
+                        </li>
+                        <li id="game-server" onclick="instant1(); return false">
+                            <h4 id="game-server-title">Instant</br><span id="Instant1"></span><label id="Instant">1</label></h4>
+                        </li>
+                       <!-- <li id="game-server" onclick="instant2(); return false">
+                            <h4 id="game-server-title" class="instantbb">Instant</br><span id="Instant2"></span><label id="Instant">2</label></h4>
+                        </li>-->
+                       
+                        <li id="game-server" onclick="crazy1(); return false">
+                            <h4 id="game-server-title">Crazy</br><span id="Crazy1"></span><label id="Crazy">1</label></h4>
+                        </li>
+                        <li id="game-server" onclick="bots1(); return false">
+                            <h4 id="game-server-title">Bot</br><span id="Bot1"></span><label id="Bot">1</label></h4>
+                        </li>
+                        <li id="game-server" onclick="selffeed1(); return false">
+                            <h4 id="game-server-title">SelfFeed</br><span id="Selffeed1"></span><label id="SelfFeed">1</label></h4>
+                        </li>
+                       <!-- <li id="game-server" onclick="selffeed2(); return false">
+                            <h4 id="game-server-title" class="selfFeedbb">SelfFeed</br><span id="Selffeed2"></span><label id="SelfFeed">2</label></h4>
+                        </li>
+                        <li id="game-server" onclick="selffeed3(); return false">
+                            <h4 id="game-server-title" class="selfFeed2bb">SelfFeed</br><span id="Selffeed3"></span><label id="SelfFeed">3</label></h4>
+                       </li>
+<li id="game-server" onclick="gunsplit(); return false">
+                            <h4 id="game-server-title" class="gunsplitbb">Gun Split</br><span id="Gunsplit1"></span><label id="Gunsplit">1</label></h4>
+                        </li>
+                         <li id="game-server" href="#teamscrime" aria-controls="teamscrime" role="tab" data-toggle="tab">
+                            <h4 id="game-server-title" >CustomTeam</br></h4>
+                        </li>
+                <li id="game-server" onclick="PrivateServer(); return false">
+                            <h4 id="game-server-title">Private Server<label id="PrivateServer">1</label></h4>
+                        </li>
+                         <input type="text" class="PrivateServer form-control" value="localhost:443">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div id="ad_bottom">
+            <h6 class="ad_text" id="Totalplayer">Total Players : 0</h6>
+            <div id="ad_bottom_inner">
+               <script src="//adm.shinobi.jp/s/4fe71e1d171f4b8da4ce47260d7d39a4"></script>
+            </div>
+        </div>
+    </div>
+   
+    <div id = 'overlays2'>
+
+        <div id = 'div_lb'>
+        <div class='header'></div>
+        <div id='lb_detail'></div>
+        </div>
+        <div id = 'div_score'></div>
+        <!--<div id = 'div_lb2'>
+         <div id="FPScount"></div>
+        <div id="drawnode"></div>
+        <div id="networkdiff"></div>
+       <div id="drawTime"></div>
+         
+        </div>-->
+    </div>
+
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/socket.io-1.3.5.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script type="text/javascript" src="v2.js"></script>
+
+</body>
+
+</html>
